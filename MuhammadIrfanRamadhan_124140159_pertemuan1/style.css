@@ -24,7 +24,7 @@ body {
 
 /* ---------- Header ---------- */
 .header {
-  background: linear-gradient(135deg, var(--hijau-tua), var(--hijau) 60%, #22c55e);
+  background: var(--hijau);
   color: #fff;
   padding: 32px 20px;
   text-align: center;
