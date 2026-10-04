@@ -1,0 +1,204 @@
+/* Mini POS - style.css murni (tema hijau) */
+:root {
+  --hijau: #15803d;
+  --hijau-tua: #166534;
+  --hijau-muda: #dcfce7;
+  --hijau-soft: #f0fdf4;
+  --merah: #dc2626;
+  --merah-tua: #b91c1c;
+  --teks: #1f2937;
+  --abu: #6b7280;
+  --garis: #e5e7eb;
+  --latar: #f3f6f4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background: var(--latar);
+  color: var(--teks);
+  line-height: 1.5;
+}
+
+/* ---------- Header ---------- */
+.header {
+  background: linear-gradient(135deg, var(--hijau-tua), var(--hijau) 60%, #22c55e);
+  color: #fff;
+  padding: 32px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(21, 128, 61, 0.25);
+}
+
+.header h1 { margin: 0 0 6px 0; font-size: 28px; letter-spacing: 0.3px; }
+.header p { margin: 0; opacity: 0.9; }
+
+/* ---------- Layout ---------- */
+.container {
+  max-width: 1040px;
+  margin: 24px auto;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.container .card:first-child,
+.container .card:nth-child(3) {
+  grid-column: span 1;
+}
+
+.container .card:nth-child(2) {
+  grid-column: span 2;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--garis);
+  border-top: 4px solid var(--hijau);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: var(--hijau-tua);
+  border-bottom: 2px solid var(--hijau-muda);
+  padding-bottom: 10px;
+}
+
+/* ---------- Form ---------- */
+.form-group { margin-bottom: 14px; }
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--hijau);
+  box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.error {
+  color: var(--merah);
+  font-size: 12px;
+  min-height: 16px;
+  display: block;
+  margin-top: 4px;
+}
+
+/* ---------- Tombol ---------- */
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:active { transform: scale(0.98); }
+
+.btn-primary { background: var(--hijau); color: #fff; width: 100%; }
+.btn-primary:hover { background: var(--hijau-tua); }
+.btn-danger { background: var(--merah); color: #fff; margin-top: 14px; }
+.btn-danger:hover { background: var(--merah-tua); }
+.btn-small { background: #fee2e2; color: var(--merah-tua); padding: 6px 12px; }
+.btn-small:hover { background: #fecaca; }
+
+/* ---------- Tabel ---------- */
+.table-wrapper { overflow-x: auto; border-radius: 8px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+th, td {
+  border-bottom: 1px solid var(--garis);
+  padding: 12px 10px;
+  text-align: left;
+}
+
+th {
+  background: var(--hijau);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+tbody tr:nth-child(even) { background: var(--hijau-soft); }
+tbody tr:hover { background: var(--hijau-muda); }
+
+td:nth-child(3),
+td:nth-child(5) {
+  text-align: right;
+  white-space: nowrap;
+}
+
+td:nth-child(4) { text-align: center; }
+
+.muted { color: var(--abu); }
+.info-ok { color: var(--hijau); font-weight: 600; }
+.info-warn { color: var(--merah); font-weight: 600; }
+
+/* ---------- Ringkasan ---------- */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.total-akhir {
+  font-size: 18px;
+  background: var(--hijau-muda);
+  color: var(--hijau-tua);
+  padding: 12px;
+  border-radius: 8px;
+}
+
+hr { border: none; border-top: 1px dashed #cbd5e1; margin: 16px 0; }
+
+.footer {
+  text-align: center;
+  color: var(--abu);
+  padding: 20px 16px;
+  font-size: 13px;
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 768px) {
+  .container { grid-template-columns: 1fr; }
+  .container .card:nth-child(2),
+  .container .card:first-child,
+  .container .card:nth-child(3) {
+    grid-column: span 1;
+  }
+  .form-row { grid-template-columns: 1fr; }
+  .header h1 { font-size: 22px; }
+}
