@@ -1,6 +1,4 @@
-// =======================================
 // 1. Menggunakan Loop (materi)
-// =======================================
 
 // For loop
 let nilaiSiswa = [85, 92, 78, 90, 88];
@@ -52,9 +50,7 @@ for (let nilai of nilaiSiswa) {
   `;
 }
 
-// =======================================
 // 2. Fungsi dan Event Handler (materi)
-// =======================================
 
 function sapaNama(nama) {
   return `Halo, ${nama}! Selamat belajar JavaScript!`;
@@ -155,9 +151,7 @@ document.getElementById("btn-bagi").addEventListener("click", function() {
   }
 });
 
-// =======================================
 // 3. Latihan
-// =======================================
 
 const latihanEl = document.getElementById("latihan");
 latihanEl.innerHTML = `<hr><h2>Latihan</h2>`;

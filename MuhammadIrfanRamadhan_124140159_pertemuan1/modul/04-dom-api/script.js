@@ -1,6 +1,4 @@
-// =======================================
 // 1. Manipulasi DOM (materi)
-// =======================================
 
 // Manipulasi DOM
 const domOutput = document.getElementById("dom-output");
@@ -30,9 +28,7 @@ document.getElementById("btn-ubah-warna").addEventListener("click", function() {
   domOutput.className = `p-4 mb-3 ${randomColor} rounded`;
 });
 
-// =======================================
 // 2. Fetch API dan Async/Await (materi)
-// =======================================
 
 // Fetch API dengan async/await
 let semuaPost = [];
@@ -66,9 +62,7 @@ function tampilkanPost(list) {
   });
 }
 
-// =======================================
 // 3. Latihan
-// =======================================
 
 const latihanEl = document.getElementById("latihan");
 latihanEl.innerHTML = `

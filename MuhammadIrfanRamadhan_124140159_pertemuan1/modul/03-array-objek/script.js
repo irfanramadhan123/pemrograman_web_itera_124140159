@@ -1,6 +1,4 @@
-// =======================================
 // 1. Array dan Metode Array (materi)
-// =======================================
 
 // Array dan metode array
 const buah = ["Apel", "Jeruk", "Mangga", "Pisang", "Anggur"];
@@ -48,9 +46,7 @@ document.getElementById("array-demo").innerHTML += `
   <p><strong>Buah dengan harga > 10.000:</strong> ${buahMahal.join(", ")}</p>
 `;
 
-// =======================================
 // 2. Bekerja dengan Objek (materi)
-// =======================================
 
 // Objek
 const mahasiswa = {
@@ -104,9 +100,7 @@ document.getElementById("objek-demo").innerHTML += `
   <p><strong>Hobi setelah dihapus:</strong> ${mahasiswa.hobi ? mahasiswa.hobi.join(", ") : "Tidak ada data hobi"}</p>
 `;
 
-// =======================================
 // 3. Latihan
-// =======================================
 
 const latihanEl = document.getElementById("latihan");
 latihanEl.innerHTML = `<hr><h2>Latihan</h2><div id="latihan-output"></div>`;

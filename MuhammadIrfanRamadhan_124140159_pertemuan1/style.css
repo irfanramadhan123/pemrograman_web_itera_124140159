@@ -1,4 +1,4 @@
-/* Mini POS - style.css murni (tema hijau) */
+/* Mini POS - style.css */
 :root {
   --hijau: #15803d;
   --hijau-tua: #166534;
@@ -149,7 +149,6 @@ th {
   font-weight: 600;
   font-size: 14px;
 }
-
 
 td:nth-child(3),
 td:nth-child(5) {

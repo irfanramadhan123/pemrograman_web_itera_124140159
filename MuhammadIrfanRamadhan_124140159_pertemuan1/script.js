@@ -1,5 +1,4 @@
 // Mini POS - Kasir Kantin Kampus
-// Fitur: validasi form, kalkulator otomatis, keranjang + localStorage
 
 const STORAGE_KEY = "pos_cart_124140159";
 const BATAS_DISKON = 50000;
@@ -37,12 +36,12 @@ inputPromo.addEventListener("input", function() {
 function validasiInput(nama, harga, qty) {
   let valid = true;
 
-  // Reset pesan
+  // Mereset pesan
   document.getElementById("error-nama").innerText = "";
   document.getElementById("error-harga").innerText = "";
   document.getElementById("error-qty").innerText = "";
 
-  // Nama: wajib, min 3 karakter
+  // Nama: min 3 karakter
   if (!nama || nama.trim().length < 3) {
     document.getElementById("error-nama").innerText = "Nama barang wajib diisi, minimal 3 karakter.";
     valid = false;
@@ -77,7 +76,7 @@ function tambahBarang() {
   const qty = Number(inputQty.value);
 
   if (!validasiInput(nama, harga, qty)) {
-    return; // cegah masuk keranjang jika tidak valid
+    return; // mencegah masuk keranjang jika tidak valid
   }
 
   cart.push({
@@ -130,7 +129,6 @@ function formatRupiah(n) {
   return "Rp" + Number(n).toLocaleString("id-ID");
 }
 
-// ---------- Render ----------
 function renderTabel() {
   const tbody = document.getElementById("keranjang-body");
   tbody.innerHTML = "";

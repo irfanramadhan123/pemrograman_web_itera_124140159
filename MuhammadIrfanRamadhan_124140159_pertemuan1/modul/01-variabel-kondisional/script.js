@@ -1,6 +1,4 @@
-// =======================================
 // 1. Mengenal Variabel dan Output
-// =======================================
 
 // Mendeklarasikan variabel dengan var, let, dan const
 var nama = "Budi";
@@ -19,9 +17,7 @@ document.getElementById("result").innerHTML = `
   <p>Tahun Lahir: <strong>${TAHUN_LAHIR}</strong></p>
 `;
 
-// =======================================
 // 2. Implementasi Struktur Kondisional
-// =======================================
 
 // Struktur kondisional
 let nilai = 85;
@@ -92,9 +88,7 @@ document.getElementById("result").innerHTML += `
   <p>Hari ini adalah: <strong>${namaHari}</strong></p>
 `;
 
-// =======================================
 // 3. Latihan
-// =======================================
 
 document.getElementById("result").innerHTML += `<hr><h2>Latihan</h2>`;
 
