@@ -1,0 +1,4 @@
+Folder ini untuk screenshot aktual aplikasi.
+Cara isi: jalankan via Live Server, screenshot dashboard / validasi / filter,
+simpan sebagai 01-dashboard.png, 02-validasi.png, 03-filter.png di sini,
+lalu perbarui bagian Screenshot di README.md.
