@@ -44,7 +44,3 @@ Harus lewat Live Server karena proyek ini pakai ES Modules.
 | Array methods | `js/app.js` | `map`, `filter`, `find`, `reduce` (baris 269), `sort` |
 | Async/await | `js/modules/data.js`, `js/app.js` | `fetchSeedTasks` (`data.js` baris 68), `bootstrap` (`app.js` baris 141) |
 | ES Modules | `js/main.js`, `js/app.js` | `import`/`export`, `<script type="module">` di `index.html` |
-
-## Pengumpulan
-
-Repo: `pemrograman_web_itera_124140159`
