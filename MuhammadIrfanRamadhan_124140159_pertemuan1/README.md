@@ -3,7 +3,7 @@
 ## Identitas
 - Nama: Muhammad Irfan Ramadhan
 - NIM: 124140159
-- Kelas Praktikum: Pengembangan Aplikasi Web
+- Kelas Praktikum: RB
 - Pertemuan: 1 - JavaScript Dasar
 
 ## Deskripsi Aplikasi
