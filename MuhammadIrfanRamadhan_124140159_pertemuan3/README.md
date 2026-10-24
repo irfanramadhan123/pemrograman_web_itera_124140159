@@ -1,93 +1,60 @@
-# Aplikasi Manajemen Buku Pribadi (Pertemuan 3)
+# Aplikasi Manajemen Buku Pribadi
 
-Muhammad Irfan Ramadhan | 124140159 | Kelas RB
+Nama: Muhammad Irfan Ramadhan
+NIM: 124140159
+Praktikum Pengembangan Aplikasi Web — Pertemuan 3 (React)
 
-## Deskripsi
+## Tentang aplikasi
 
-Aplikasi React untuk mencatat buku yang **dimiliki**, **sedang dibaca**, atau **ingin dibeli**. Pengguna bisa menambah, mengedit, menghapus, memfilter, dan mencari buku. Data disimpan di `localStorage`, jadi tidak hilang ketika halaman di-refresh. Halaman **Statistik** menampilkan ringkasan koleksi.
+Aplikasi untuk mencatat buku yang dimiliki, sedang dibaca, atau ingin dibeli.
+Dibuat pakai React (Vite).
 
-## Instalasi & Menjalankan
+Fitur:
+- Tambah, edit, dan hapus buku (judul, penulis, status)
+- Filter buku berdasarkan status
+- Cari buku berdasarkan judul atau nama penulis
+- Validasi form, kolom kosong ditandai merah dengan pesan error
+- Halaman statistik jumlah buku per status
+- Data tersimpan di localStorage jadi tidak hilang saat refresh
 
-1. Buka folder repositori di **VS Code**.
-2. Buka terminal VS Code (`Ctrl + ``) lalu jalankan:
+## Cara menjalankan
+
+1. Buka folder ini di VS Code
+2. Buka terminal, lalu jalankan:
 
 ```bash
-cd MuhammadIrfanRamadhan_124140159_pertemuan3
 npm install
-npm run dev      # buka http://localhost:5173
-npm test         # menjalankan unit test (Vitest + React Testing Library)
-npm run build    # build produksi
+npm run dev
 ```
+
+3. Buka `http://localhost:5173` di browser
+
+Untuk menjalankan unit test: `npm test`
 
 ## Screenshot
 
-| Halaman | Gambar |
+### Halaman beranda
+![Beranda](screenshots/01-beranda.png)
+
+### Validasi form
+![Validasi](screenshots/02-validasi.png)
+
+### Halaman statistik
+![Statistik](screenshots/03-statistik.png)
+
+## Fitur React yang dipakai
+
+| Materi | File |
 |---|---|
-| Beranda (daftar buku) | ![Beranda](screenshots/01-beranda.png) |
-| Validasi form kosong | ![Validasi](screenshots/02-validasi.png) |
-| Halaman Statistik | ![Statistik](screenshots/03-statistik.png) |
-| Hasil unit test | ![Test](screenshots/04-hasil-test.png) |
-
-## Fitur
-
-- Tambah buku (judul, penulis, status: milik / baca / beli)
-- Edit dan hapus buku (dengan konfirmasi sebelum menghapus)
-- Filter berdasarkan status
-- Pencarian berdasarkan judul atau nama penulis
-- Validasi form: kolom wajib diisi, border merah, dan pesan error
-- Data tersimpan di localStorage
-- Halaman Statistik (jumlah per status, persentase, penulis terbanyak) dan halaman 404
-
-## Struktur Folder
-
-```
-src/
-├── components/
-│   ├── BookForm/     # form tambah/edit + validasi
-│   ├── BookList/     # daftar buku
-│   ├── BookItem/     # kartu satu buku
-│   ├── BookFilter/   # pencarian + filter status
-│   └── Navbar/       # navigasi antar halaman
-├── pages/
-│   ├── Home/         # halaman utama
-│   ├── Stats/        # halaman statistik
-│   └── NotFound/     # halaman 404
-├── hooks/
-│   ├── useLocalStorage.js
-│   └── useBookStats.js
-├── context/
-│   └── BookContext.jsx
-└── App.jsx
-```
-
-## Penerapan Konsep React
-
-| Konsep | Penerapan |
-|---|---|
-| `useState` | State form, pesan error, kata kunci pencarian, filter status, dan buku yang sedang diedit |
-| `useEffect` | Menyimpan data ke localStorage (`useLocalStorage`), mengisi ulang form saat mode edit, dan memperbarui judul tab browser |
+| useState & useEffect | `pages/Home/Home.jsx`, `components/BookForm/BookForm.jsx`, `hooks/useLocalStorage.js` |
 | Komponen reusable | `BookForm`, `BookList`, `BookItem`, `BookFilter`, `Navbar` |
-| Context API | `BookContext` menyediakan `books`, `addBook`, `updateBook`, `deleteBook` lewat hook `useBooks()` sehingga tidak ada prop drilling |
-| React Router | `/` (Beranda), `/stats` (Statistik), `*` (404) dengan `NavLink` |
-| Custom hooks | `useLocalStorage` (state yang tersinkron ke localStorage) dan `useBookStats` (hitung statistik dengan `useMemo`) |
-| PropTypes | Dipasang di seluruh komponen yang menerima props |
-| Error handling | `validateBook()` di `BookForm` dan `try/catch` saat membaca/menulis localStorage |
+| Context API | `context/BookContext.jsx` |
+| React Router | `App.jsx` (halaman `/` dan `/stats`) |
+| Custom hooks | `hooks/useLocalStorage.js`, `hooks/useBookStats.js` |
+| PropTypes | semua komponen di folder `components/` |
 
-## Laporan Testing
+## Laporan testing
 
-Testing memakai **Vitest + React Testing Library**, dengan **15 test di 5 file**:
+Testing pakai Vitest + React Testing Library, total 15 test dan semuanya lolos.
 
-| File | Yang diuji |
-|---|---|
-| `BookForm.test.jsx` | Error saat form kosong, submit data valid (dengan trim), mode edit, `validateBook` |
-| `BookItem.test.jsx` | Render data buku, tombol Hapus dan Edit memanggil callback |
-| `BookFilter.test.jsx` | Input pencarian, tombol filter aktif dan callback |
-| `hooks.test.jsx` | `useLocalStorage` menyimpan/membaca data, `useBookStats` menghitung statistik |
-| `App.test.jsx` | Integrasi: tambah buku dan tersimpan ke localStorage, pencarian, hapus |
-
-```
- Test Files  5 passed (5)
-      Tests  15 passed (15)
-```
-
-Screenshot hasil eksekusi di terminal: `screenshots/04-hasil-test.png`.
+![Hasil test](screenshots/04-hasil-test.png)
