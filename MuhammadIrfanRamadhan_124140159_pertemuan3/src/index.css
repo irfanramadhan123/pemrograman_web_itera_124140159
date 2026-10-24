@@ -1,0 +1,24 @@
+/* Palet diselaraskan dengan Pertemuan 1 & 2 (tema hijau):
+   primer #15803d, tua #166534, muda #dcfce7, latar #f3f6f4. */
+:root {
+  --primary: #15803d;
+  --primary-dark: #166534;
+  --primary-light: #dcfce7;
+  --danger: #b91c1c;
+  --bg: #f3f6f4;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --muted: #6b7280;
+  --shadow: 0 1px 3px rgb(16 24 40 / 0.08);
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  color: #1f2937;
+  line-height: 1.55;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); }
+.container { max-width: 1050px; margin: 0 auto; padding: 1.5rem 1rem; }
+.btn { border: none; padding: 0.5rem 1rem; border-radius: 8px; cursor: pointer; font-size: 0.9rem; }
+.btn-primary { background: var(--primary); color: #fff; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-secondary { background: var(--primary-light); color: var(--primary-dark); }
+.btn-danger { background: #fee2e2; color: var(--danger); }

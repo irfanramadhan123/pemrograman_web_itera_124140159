@@ -1,0 +1,22 @@
+.book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: var(--card);
+  padding: 1.25rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.book-form h2 { margin: 0 0 0.5rem; font-size: 1.15rem; }
+.book-form label { font-weight: 600; font-size: 0.9rem; margin-top: 0.4rem; }
+.book-form input,
+.book-form select {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: #fff;
+}
+.book-form .input-error { border-color: var(--danger); background: #fef2f2; }
+.error-text { color: var(--danger); font-size: 0.82rem; margin: 0; }
+.form-actions { display: flex; gap: 0.5rem; margin-top: 0.8rem; }

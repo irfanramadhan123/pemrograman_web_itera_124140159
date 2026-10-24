@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgb(21 128 61 / 0.25);
+}
+.navbar-brand { font-weight: 700; font-size: 1.15rem; }
+.navbar-links { display: flex; gap: 0.5rem; }
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+}
+.navbar-links a.active,
+.navbar-links a:hover { background: rgba(255, 255, 255, 0.2); }
