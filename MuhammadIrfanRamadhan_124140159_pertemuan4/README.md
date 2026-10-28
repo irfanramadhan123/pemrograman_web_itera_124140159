@@ -37,14 +37,3 @@ Untuk `tugas1_bmi.py`, masukkan berat (kg) dan tinggi (m) saat diminta.
 
 ### Soal 3 — Modul matematika
 ![Modul matematika](screenshots/ss_suhu.png)
-
-## Materi Python yang dipakai
-
-| Materi | File |
-|---|---|
-| Variabel, input & f-string | `tugas1_bmi.py` |
-| if-elif-else | `tugas1_bmi.py` (kategori BMI), `tugas2_nilai_mahasiswa.py` (grade) |
-| Loop | `tugas2_nilai_mahasiswa.py`, `main.py` |
-| List & dictionary | `tugas2_nilai_mahasiswa.py` |
-| Fungsi & docstring | semua file |
-| Modul & import | `math_operations.py`, `main.py` (`import ... as` dan `from ... import`) |
